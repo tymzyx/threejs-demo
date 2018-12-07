@@ -45,7 +45,7 @@
   }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
   .canvas-box {
     width: 100vw;
     height: 600px;
