@@ -19,6 +19,7 @@
 
     methods: {
       init() {
+        const _this = this;
         let cameraFov = 100; //相机视角
         let cameraDistance = 0;
 
@@ -346,7 +347,12 @@
                   mesh.material.transparent = true;
                   //mesh.material.opacity = 0.5;
                   //alert(mesh.name);
-                  typeof mesh.listIndex === 'number' && ListV.dealSelectObject(mesh.listIndex);
+                  _this.$message({
+                    type: 'info',
+                    message: 'clicked',
+                    // duration: 0
+                  });
+                  // typeof mesh.listIndex === 'number' && ListV.dealSelectObject(mesh.listIndex);
                 }
               }
             );
@@ -572,9 +578,15 @@
   }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
   .canvas-box {
     width: 100vw;
     height: 600px;
+  }
+
+  .el-message {
+    transform: translateX(-50%) rotate(90deg);
+    top: 44%;
+    left: 80%;
   }
 </style>
